@@ -40,9 +40,7 @@ const petJudger = (petBreed, petName) => {
 
 const loopFromOneUpToAnother = (firstNum, secondNum) => {
   // Your code here
-  if (firstNum >= secondNum) {
-    return;
-  } else {
+  if (!(firstNum >= secondNum)) {
     for (let i = firstNum; i < secondNum; i++) {
       console.log(i);
     }

@@ -45,15 +45,15 @@ const decreaseScore = (name) => {
   }
 }
 
+const resetSingleScore = (player) => {
+  player.score = 0; // had to change so that it acess value instead of key
+}
+
 const resetAllScores = () => {
   for (let i = 0; i < players.length; i++) {
     const player = players[i];
     resetSingleScore(player);
   }
-}
-
-const resetSingleScore = (player) => {
-  player.score = 0; // had to change so that it acess value instead of key
 }
 
 const getTopScorer = () => {
