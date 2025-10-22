@@ -31,7 +31,7 @@ const players = [
 ];
 
 const increaseScore = (name) => {
-  for (let i = 0; i < players.length; i++) {//had is less then or equal to the players lenght 
+  for (let i = 0; i < players.length; i++) { // had is less then or equal to the players lenght
     if (players[i].name === name) {
       players[i].score += 1;
     }
@@ -47,13 +47,13 @@ const decreaseScore = (name) => {
 
 const resetAllScores = () => {
   for (let i = 0; i < players.length; i++) {
-    let player = players[i];
+    const player = players[i];
     resetSingleScore(player);
   }
 }
 
 const resetSingleScore = (player) => {
-  player.score = 0;//had to change so that it acess value instead of key
+  player.score = 0; // had to change so that it acess value instead of key
 }
 
 const getTopScorer = () => {

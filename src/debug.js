@@ -12,7 +12,7 @@
 // This function should print and return a message based on temperature
 
 const fixVariables = (temp) => {
-  let msg =""
+  let msg = ''
   if (temp < 30) {
     msg = 'Pretty chilly.';
   } else if (temp < 70) {
@@ -34,16 +34,12 @@ const fixVariables = (temp) => {
 // It should NOT mutate the original array
 
 const doubleAllItemsPurely = (arr) => {
-  let doubled = [...arr];
+  const doubled = [...arr];
   for (let i = 0; i < arr.length; i++) {
     doubled[i] = arr[i] * 2;
   }
   return doubled;
 };
-const nums = [1,2,3];
-const doubled = doubleAllItemsPurely(nums)
-console.log(nums);    // [1, 2, 3]
-console.log(doubled); // [2, 4, 6]
 
 // ============================================
 // Question 3: sumArray
@@ -57,7 +53,6 @@ const sumArray = (nums) => {
   }
   return sum;
 };
-sumArray([1,2,3,4,5]);
 
 // ============================================
 // Exports

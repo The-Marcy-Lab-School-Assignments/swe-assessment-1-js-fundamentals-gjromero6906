@@ -14,23 +14,23 @@
 // ============================================
 
 const petJudger = (petBreed, petName) => {
-  let typeOfBreed = typeof petBreed;
-  let typeOfName = typeof petName;
+  const typeOfBreed = typeof petBreed;
+  const typeOfName = typeof petName;
 
-  if(typeOfBreed ==='undefined'|| typeOfName === 'undefined' ){
+  if (typeOfBreed === 'undefined' || typeOfName === 'undefined') {
     console.log(`Missing information. Please provide a valid pet.`);
     return;
   }
-  const lowerCasePet= petBreed.toLowerCase();
-  if(lowerCasePet ==='dog'){
+  const lowerCasePet = petBreed.toLowerCase();
+  if (lowerCasePet === 'dog') {
     console.log(`I love dogs! ${petName} is so cute!`);
-  }else if(lowerCasePet ==='cat'){
+  } else if (lowerCasePet === 'cat') {
     console.log(`I love cats! ${petName} is so cute!`)
-  }else if(lowerCasePet ==='turtle'){
+  } else if (lowerCasePet === 'turtle') {
     console.log(`Who doesn't love a good turtle? ${petName} is the tops.`)
-  }else if(lowerCasePet ==='snake'){
+  } else if (lowerCasePet === 'snake') {
     console.log(`Not a fan, please take ${petName} and leave.`)
-  }else{
+  } else {
     console.log(`What an...interesting pet.`)
   }
 };
@@ -40,10 +40,10 @@ const petJudger = (petBreed, petName) => {
 
 const loopFromOneUpToAnother = (firstNum, secondNum) => {
   // Your code here
-  if (firstNum>=secondNum){
+  if (firstNum >= secondNum) {
     return;
-  }else{
-    for(let i = firstNum;i<secondNum;i++){
+  } else {
+    for (let i = firstNum; i < secondNum; i++) {
       console.log(i);
     }
   }
@@ -55,10 +55,10 @@ const loopFromOneUpToAnother = (firstNum, secondNum) => {
 
 const shoutEveryLetterForLoop = (str) => {
   // Your code here
-  if(str.length<=0){
+  if (str.length <= 0) {
     return;
   }
-  for(let i =0;i<str.length;i++){
+  for (let i = 0; i < str.length; i++) {
     console.log(`${str[i].toUpperCase()}!`);
   }
 };
@@ -68,20 +68,20 @@ const shoutEveryLetterForLoop = (str) => {
 
 const letterCaseCounts = (str) => {
   // Your code here
-  const capLetter="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  const lowerCaseLetter ="abcdefghijklmnopqrstuvwxyz"
-  const counter={
-    lowercase:0,
-    uppercase:0,
-    neither:0
+  const capLetter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  const lowerCaseLetter = 'abcdefghijklmnopqrstuvwxyz'
+  const counter = {
+    lowercase: 0,
+    uppercase: 0,
+    neither: 0,
   }
-  for(let i =0;i<str.length;i++){
-    if(capLetter.includes(str[i])){
-      counter.uppercase ++;
-    }else if (lowerCaseLetter.includes(str[i])){
-      counter.lowercase ++;
-    }else{
-      counter.neither ++;
+  for (let i = 0; i < str.length; i++) {
+    if (capLetter.includes(str[i])) {
+      counter.uppercase++;
+    } else if (lowerCaseLetter.includes(str[i])) {
+      counter.lowercase++;
+    } else {
+      counter.neither++;
     }
   }
   return counter;
@@ -94,10 +94,10 @@ letterCaseCounts('abCdef 123');
 
 const getNamesOfGreedyGnomes = (gnomes) => {
   // Your code here
-  let greedyName =[];
-  for(let i = 0;i<gnomes.length;i++){
-    let NumItems = gnomes[i].stolenDecorations.length;
-  if(NumItems>1){
+  const greedyName = [];
+  for (let i = 0; i < gnomes.length; i++) {
+    const NumItems = gnomes[i].stolenDecorations.length;
+    if (NumItems > 1) {
       greedyName.push(gnomes[i].name);
     }
   }
