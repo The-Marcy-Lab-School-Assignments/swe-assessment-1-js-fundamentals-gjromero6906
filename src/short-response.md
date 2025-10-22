@@ -7,6 +7,17 @@ Write your responses directly in this file. Follow markdown formatting guideline
 ## Section 1: Short Response
 
 ### Question 1
+this is a scope error,the variable currentStatus is being called out side the if else statement (aka its being called in  global scope rather then with in thestatement).To fix this error we simply create the currentStatus function before the if else statement and get rid of else.
+ex:
+```javascript
+const react = (isReuben) => {
+    let currentStatus = 'Time to panic.'
+    if (isReuben) {
+        currentStatus = 'Everything is just fine';
+    }
+  
+  console.log(currentStatus);
+}
 
 
 ### Question 2
@@ -17,6 +28,11 @@ bestPlayer.name = "Michael Jordan";
 This means that when we changed bestPlayer theGoat will change along with it because it is refering to that object originally.
 
 ### Question 3
+It will print out 
+Paul is the hardest working person in the room.
+Laisha is the hardest working person in the room.
+because the order in which the fuctions were called and the scope of the variable.
+tho its not best pratice since it can throw errors and side effects variable names can be the same name in different scope for example the one at the out side (const theHustler) is a global scope while the one in shout out is inside function scope.
 
 
 ### Question 4
