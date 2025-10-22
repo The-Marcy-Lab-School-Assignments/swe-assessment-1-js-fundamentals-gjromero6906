@@ -94,43 +94,45 @@ letterCaseCounts('abCdef 123');
 
 const getNamesOfGreedyGnomes = (gnomes) => {
   // Your code here
-  // let greedyName =[];
-  // for(let i = 0;i<gnomes.length;i++){
-  //   let NumItems = g
-
-  // }
-  // return greedyName;
+  let greedyName =[];
+  for(let i = 0;i<gnomes.length;i++){
+    let NumItems = gnomes[i].stolenDecorations.length;
+  if(NumItems>1){
+      greedyName.push(gnomes[i].name);
+    }
+  }
+  return greedyName;
 };
-// const gnomes = [
-//   {
-//     name: 'Garbeldel',
-//     gardenCount: 2,
-//     age: 407,
-//     stolenDecorations: ['chair', 'fountain', 'statue'],
-//   },
-//   {
-//     name: 'Farbus',
-//     gardenCount: 3,
-//     age: 281,
-//     stolenDecorations: ['greek statue'],
-//   },
-//   {
-//     name: 'Peekle',
-//     gardenCount: 3,
-//     age: 101,
-//     stolenDecorations: [],
-//   },
-//   {
-//     name: 'Jorbles',
-//     gardenCount: 3,
-//     age: 900,
-//     stolenDecorations: ['wind chimes', 'mini golfer'],
-//   },
-// ];
+const gnomes = [
+  {
+    name: 'Garbeldel',
+    gardenCount: 2,
+    age: 407,
+    stolenDecorations: ['chair', 'fountain', 'statue'],
+  },
+  {
+    name: 'Farbus',
+    gardenCount: 3,
+    age: 281,
+    stolenDecorations: ['greek statue'],
+  },
+  {
+    name: 'Peekle',
+    gardenCount: 3,
+    age: 101,
+    stolenDecorations: [],
+  },
+  {
+    name: 'Jorbles',
+    gardenCount: 3,
+    age: 900,
+    stolenDecorations: ['wind chimes', 'mini golfer'],
+  },
+];
 
-// getNamesOfGreedyGnomes(gnomes); // Returns ['Garbeldel', 'Jorbles']
+getNamesOfGreedyGnomes(gnomes); // Returns ['Garbeldel', 'Jorbles']
 
-// getNamesOfGreedyGnomes([]); // Returns []
+getNamesOfGreedyGnomes([]); // Returns []
 // ============================================
 // Exports
 // ============================================

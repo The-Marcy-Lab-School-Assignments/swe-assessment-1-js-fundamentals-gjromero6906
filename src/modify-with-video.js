@@ -20,7 +20,7 @@
   - The bugs you found (what's wrong and why)
   - The fixes you implemented
 
-  ADD YOUR LOOM LINK HERE: __________
+  ADD YOUR LOOM LINK HERE: https://www.loom.com/share/2c1ec7de7bb64b9cba8b0661f4cd53cc?sid=36f9844a-7178-4db1-949b-b22eef2ea327
 */
 
 const players = [
