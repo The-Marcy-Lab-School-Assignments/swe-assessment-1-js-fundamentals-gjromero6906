@@ -20,7 +20,7 @@
   - The bugs you found (what's wrong and why)
   - The fixes you implemented
 
-  ADD YOUR LOOM LINK HERE: __________
+  ADD YOUR LOOM LINK HERE: https://www.loom.com/share/2c1ec7de7bb64b9cba8b0661f4cd53cc?sid=36f9844a-7178-4db1-949b-b22eef2ea327
 */
 
 const players = [
@@ -31,13 +31,12 @@ const players = [
 ];
 
 const increaseScore = (name) => {
-  for (let i = 0; i <= players.length; i++) {
-    if (players[i].name = name) {
+  for (let i = 0; i < players.length; i++) { // had is less then or equal to the players lenght
+    if (players[i].name === name) {
       players[i].score += 1;
     }
   }
 }
-
 const decreaseScore = (name) => {
   for (let i = 0; i < players.length; i++) {
     if (players[i].name === name) {
@@ -46,15 +45,15 @@ const decreaseScore = (name) => {
   }
 }
 
-const resetAllScores = () => {
-  for (let i = 0; i < players.length; i++) {
-    let player = players[i];
-    resetSingleScore(player);
-  }
+const resetSingleScore = (player) => {
+  player.score = 0; // had to change so that it acess value instead of key
 }
 
-const resetSingleScore = (player) => {
-  score = 0;
+const resetAllScores = () => {
+  for (let i = 0; i < players.length; i++) {
+    const player = players[i];
+    resetSingleScore(player);
+  }
 }
 
 const getTopScorer = () => {
